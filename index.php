@@ -5,6 +5,8 @@ include_once('./includes/connection.php');
 include_once('./includes/article.php');
 
 $article = new Article;
+$articles = $article->fetch_all();
+
 
 ?>
 
@@ -21,9 +23,24 @@ $article = new Article;
         <a href="index.php" id="logo">CMS</a>
 
         <ol>
+            <?php foreach ($articles as $article){ ?>
             <li>
-                <a href="article.php?id=1">Article title</a>
+                <a href="article.php?id=<?php echo $article['article_id']; ?>">
+                    <h3>
+                        <?php echo $article['article_title']; ?>
+                    </h3>
+                    <div class="article_content article_content--small">
+                        <p>
+                            <?php echo $article['article_content']; ?>
+                        </p>
+                    </div>
+                </a>
+                <div class="date">
+                    Posted on
+                    <?php echo date('l jS', $article['article_timestamp']); ?>
+                </div>
             </li>
+            <?php } ?>
         </ol>
     </div>
 </body>

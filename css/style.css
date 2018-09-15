@@ -3,6 +3,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p { 
+    line-height: 30px;
+}
+
 a:link, a:visited {
     color: slategray;
     text-decoration: none;
@@ -19,4 +23,24 @@ a:hover {
     padding-bottom: 50px;
     max-width: 900px;
     margin: 0 auto;
+}
+
+ol {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    width: 33%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px 15px;
+}
+
+.date {
+    padding-top: 10px;
+    font-size: small;
+    font-style: italic;
+    color: #999;
 }
