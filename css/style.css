@@ -44,3 +44,16 @@ li {
     font-style: italic;
     color: #999;
 }
+
+.error {
+    margin: 20 0px;
+    padding: 20px;
+    background: #F79D98;
+    border: 2px solid #f32020;
+}
+
+.error p {
+    color: #f32020;
+    font-weight: 700;
+    margin: 0;
+}

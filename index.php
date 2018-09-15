@@ -1,12 +1,10 @@
 <?php
 
-
 include_once('./includes/connection.php');
 include_once('./includes/article.php');
 
 $article = new Article;
 $articles = $article->fetch_all();
-
 
 ?>
 
@@ -42,6 +40,10 @@ $articles = $article->fetch_all();
             </li>
             <?php } ?>
         </ol>
+
+        <div>
+            <a href="admin">admin</a>
+        </div>
     </div>
 </body>
 </html>
