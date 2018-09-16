@@ -58,10 +58,13 @@ if(isset($_SESSION['logged_in'])) {
                 //User entered correct details
                 $_SESSION['logged_in'] = true;
 
-                exit();
+                header('Location: index.php');
+
             } else {
+
                 //User entered false details
                 $error = 'Incorrect details!';
+                
             }
         }
     }
